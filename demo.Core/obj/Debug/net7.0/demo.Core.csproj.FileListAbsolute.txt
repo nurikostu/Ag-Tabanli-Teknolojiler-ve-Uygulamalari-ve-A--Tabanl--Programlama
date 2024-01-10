@@ -1,0 +1,11 @@
+C:\Users\Asus\source\repos\demo\demo.core\bin\Debug\net7.0\demo.Core.deps.json
+C:\Users\Asus\source\repos\demo\demo.core\bin\Debug\net7.0\demo.Core.dll
+C:\Users\Asus\source\repos\demo\demo.core\bin\Debug\net7.0\demo.Core.pdb
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.AssemblyInfo.cs
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.dll
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\refint\demo.Core.dll
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\demo.Core.pdb
+C:\Users\Asus\source\repos\demo\demo.core\obj\Debug\net7.0\ref\demo.Core.dll

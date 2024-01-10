@@ -1,0 +1,93 @@
+﻿@model IEnumerable<BookViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Books</h2>
+
+<form asp-action="Index" class="row g-2">
+    <div class="col-3">
+        <input class="form-control" placeholder="Search Book" type="text" name="searchTerm" value="@ViewData["currentFilter"]" />
+    </div>
+    <div class="col-9">
+        <input type="submit" value="Search" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to Full List</a>
+    </div>
+    <div class="col-12">
+        Find by:
+        <input type="radio" name="searchBy" value="title" checked /> Title
+        <input type="radio" name="searchBy" value="isbn" /> ISBN
+    </div>
+</form>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                Authors
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallNumber)
+            </th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookId)
+                </td>
+                <td>
+                    @Html.ActionLink(item.Title, "Details", new { id = item.BookId })
+                </td>
+                <td>
+                    @foreach (var author in item.Authors)
+                    {
+                        <span class="d-block">@author.Name</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Language)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ISBN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CallNumber)
+                </td>
+                <td>
+                    @if (item.Issue == null)
+                    {
+                        <span class="badge bg-success">AVAILABLE</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">DUE @item.Issue.ExpireDate.ToString("dd-MM-yyyy")</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

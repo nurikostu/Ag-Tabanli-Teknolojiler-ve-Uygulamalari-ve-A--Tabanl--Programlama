@@ -1,0 +1,17 @@
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Data.deps.json
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Data.runtimeconfig.json
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Data.dll
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Data.pdb
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Core.dll
+C:\Users\Asus\source\repos\demo\demo.data\bin\Debug\net7.0\demo.Core.pdb
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.AssemblyInfo.cs
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.csproj.CopyComplete
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.dll
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\refint\demo.Data.dll
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.pdb
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\demo.Data.genruntimeconfig.cache
+C:\Users\Asus\source\repos\demo\demo.data\obj\Debug\net7.0\ref\demo.Data.dll

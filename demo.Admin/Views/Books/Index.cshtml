@@ -1,0 +1,111 @@
+﻿@model IEnumerable<BookViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h2>Books</h2>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>
+
+<form asp-action="Index" class="row g-2">
+    <div class="col-md-3">
+        <input class="form-control" placeholder="Search Book" type="text" name="searchTerm" value="@ViewData["currentFilter"]" />
+    </div>
+    <div class="col-md-9">
+        <input type="submit" value="Search" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to Full List</a>
+    </div>
+    <div class="col-md-12">
+        Find by:
+        <input type="radio" name="searchBy" value="title" checked /> Title
+        <input type="radio" name="searchBy" value="isbn" /> ISBN
+    </div>
+</form>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Authors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxIssueDays)
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookId)
+                </td>
+                <td width="150">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td width="120">
+                    @foreach (var author in item.Authors ?? Enumerable.Empty<Author>())
+                    {
+                        <span class="d-block">@author.Name</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Language)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ISBN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CallNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxIssueDays)
+                </td>
+                <td>
+                    @if (item.Issue == null)
+                    {
+                        <span class="badge bg-success">AVAILABLE</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">DUE @item.Issue.ExpireDate.ToString("dd-MM-yyyy")</span>
+                    }
+                </td>
+                <td width="170">
+                    <a asp-action="Edit" asp-route-id="@item.BookId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

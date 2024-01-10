@@ -1,0 +1,69 @@
+/* Temel Stil */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+/* Baþlýk Stili */
+header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Ana Ýçerik Alaný */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Gönderi Kartý */
+.post-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .post-card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .post-card h2 {
+        margin: 10px 0;
+    }
+
+    .post-card p {
+        color: #666;
+    }
+
+/* Footer Stili */
+footer {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    position:absolute;
+}

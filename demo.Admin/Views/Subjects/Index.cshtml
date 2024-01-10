@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SubjectViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h2>Subjects</h2>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>
+
+<form asp-action="Index" class="row g-2">
+    <div class="col-md-3">
+        <input class="form-control" placeholder="Subject Name" type="text" name="searchTerm" value="@ViewData["currentFilter"]" />
+    </div>
+    <div class="col-md-9">
+        <input type="submit" value="Search" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to Full List</a>
+    </div>
+</form>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubjectId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SubjectId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.SubjectId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.SubjectId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
